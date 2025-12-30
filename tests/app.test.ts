@@ -9,7 +9,7 @@ describe('/replaceDogWithCat', () => {
       const inputFile = 'files/test3.json'
       const outputFile = 'files/test3-output.json'
 
-      const response = await request(app)
+      await request(app)
         .post('/replaceDogWithCat')
         .send({files: [inputFile]})
         .set('Accept', 'application/json')
